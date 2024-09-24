@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        /* background-color: green; */
+      }
+      .list {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="list1" class="list" style="z-index: 2; opacity: 0.8"></div>
+    <div id="list2" class="list" style="z-index: 1"></div>
+    <script src="demo.js"></script>
+    <script>
+      let rect = list1.getBoundingClientRect()
+      for (let i = 0; i < 256; i++) {
+        let width = rect.width / 256
+        let height = 50
+
+        let div = document.createElement('div')
+        div.title = i
+        div.className = 'box'
+        let [r, g, b, a] = values[i]
+        div.style.background = `rgba(${r},${g},${b},${a})`
+        div.style.width = width + 'px'
+        div.style.height = height + 'px'
+        list1.appendChild(div)
+
+        div = document.createElement('div')
+        div.title = i
+        div.className = 'box'
+        div.style.background = i % 2 == 0 ? 'gray' : 'lightgray'
+        div.style.width = width + 'px'
+        div.style.height = height + 'px'
+        list2.appendChild(div)
+      }
+    </script>
+  </body>
+</html>

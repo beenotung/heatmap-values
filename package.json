@@ -1,26 +1,28 @@
 {
   "name": "heatmap-values",
   "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "dev": "esbuild example/demo.ts --bundle --outfile=example/demo.js --watch",
     "test": "tsc --noEmit",
     "clean": "rimraf dist",
     "build": "rimraf dist && tsc -p . && rimraf dist/tsconfig.tsbuildinfo",
     "tsc": "tsc -p ."
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@types/node": "^22.5.4",
+    "esbuild": "^0.23.1",
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.6.2"
-  },
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ]
+  }
 }

@@ -1,12 +1,36 @@
 {
   "name": "heatmap-values",
   "version": "0.0.0",
-  "description": "",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "description": "Generate heatmap with RGBA from pre-built or custom color scheme.",
+  "keywords": [
+    "heatmap",
+    "color-scheme",
+    "AI",
+    "machine-learning",
+    "class-activation-map",
+    "rgba",
+    "typescript",
+    "isomorphic",
+    "node.js",
+    "browsers",
+    "visualization",
+    "color-gradient"
+  ],
+  "author": "Beeno Tung <aabbcc1241@yahoo.com.hk> (https://beeno-tung.surge.sh)",
+  "license": "BSD-2-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beenotung/heatmap-values.git"
+  },
+  "homepage": "https://github.com/beenotung/heatmap-values#readme",
+  "bugs": {
+    "url": "https://github.com/beenotung/heatmap-values/issues"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "directories": {
+    "example": "example"
+  },
   "files": [
     "dist"
   ],

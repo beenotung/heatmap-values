@@ -1,6 +1,6 @@
 {
   "name": "heatmap-values",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Generate heatmap with RGBA from pre-built or custom color scheme.",
   "keywords": [
     "heatmap",

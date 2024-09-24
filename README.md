@@ -10,11 +10,15 @@ Designed for class activation map of image classifier AI model visualization.
 
 ## Features
 
-- Multiple built-in color scheme:
+- Multiple built-in color schemes:
   - red-green-blue
+    ![heatmap of red-green-blue color scheme](./example/red-green-blue.webp)
   - red-transparent-blue
+    ![heatmap of red-transparent-blue color scheme](./example/red-transparent-blue.webp)
   - hot-only
+    ![heatmap of hot-only color scheme](./example/hot-only.webp)
   - cold-only
+    ![heatmap of cold-only color scheme](./example/cold-only.webp)
 - Support custom color scheme
 - Typescript support
 - Isomorphic package: works in Node.js and browsers

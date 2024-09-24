@@ -12,7 +12,7 @@
     "typescript",
     "isomorphic",
     "node.js",
-    "browsers",
+    "browser",
     "visualization",
     "color-gradient"
   ],

@@ -38,11 +38,9 @@ export const heatmap_schemes = {
   },
 } satisfies Record<string, HeatmapScheme>
 
-export const default_heatmap_scheme: HeatmapScheme =
-  heatmap_schemes.red_transparent_blue
-
 export function generate_heatmap_values(
-  scheme: HeatmapScheme = default_heatmap_scheme,
+  /** @description default is red_transparent_blue */
+  scheme: HeatmapScheme = heatmap_schemes.red_transparent_blue,
 ) {
   let values: RGBA[] = new Array(256)
   for (let i = 0; i < 256; i++) {
@@ -65,5 +63,3 @@ export function generate_heatmap_values(
   }
   return values
 }
-
-export function normalize() {}

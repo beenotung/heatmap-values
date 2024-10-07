@@ -46,16 +46,23 @@ export function generate_heatmap_values(
   for (let i = 0; i < 256; i++) {
     let value = i / 255
     let color: RGBA = [0, 0, 0, 0]
+    let is_transparent = scheme.middle[3] == 0
     for (let i = 0; i < 4; i++) {
       if (value < 0.5) {
         let low = 1 - value * 2
         let middle = 1 - low
-        let c = scheme.low[i] * low + scheme.middle[i] * middle
+        let c =
+          is_transparent && i != 3
+            ? scheme.low[i]
+            : scheme.low[i] * low + scheme.middle[i] * middle
         color[i] = i == 3 ? c : Math.floor(c)
       } else {
         let high = 2 * (value - 0.5)
         let middle = 1 - high
-        let c = scheme.high[i] * high + scheme.middle[i] * middle
+        let c =
+          is_transparent && i != 3
+            ? scheme.high[i]
+            : scheme.high[i] * high + scheme.middle[i] * middle
         color[i] = i == 3 ? c : Math.floor(c)
       }
     }

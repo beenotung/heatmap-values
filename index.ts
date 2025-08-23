@@ -38,6 +38,7 @@ export const heatmap_schemes = {
   },
 } satisfies Record<string, HeatmapScheme>
 
+/** @description generate heatmap gradient in 256 steps */
 export function generate_heatmap_values(
   /** @description default is red_transparent_blue */
   scheme: HeatmapScheme = heatmap_schemes.red_transparent_blue,
